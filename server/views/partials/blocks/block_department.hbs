@@ -1,0 +1,26 @@
+<tbody>
+    <tr style="display: none" forbidden>
+        <td>ID:</td>
+        <td><input name="id" type="text" value="{{#if department}}{{department}}{{else}}new_record{{/if}}" readonly tab_form_field></td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Наименование:</td>
+        <td><input name="department_title" class="" type="text" value="{{department_title}}" readonly tab_form_field></td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Юридическое имя:</td>
+        <td><input name="department_jname" class="" type="text" value="{{department_jname}}" readonly tab_form_field></td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>ОГРН:</td>
+        <td><input name="department_ogrn" class="" type="text" value="{{department_ogrn}}" readonly tab_form_field></td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>ИНН:</td>
+        <td><input name="department_inn" class="" type="text" value="{{department_inn}}" readonly tab_form_field></td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Адрес:</td>
+        <td><input name="department_address" class="" type="text" value="{{department_address}}" readonly tab_form_field></td>
+    </tr>
+</tbody>

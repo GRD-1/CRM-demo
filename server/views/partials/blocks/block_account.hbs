@@ -1,0 +1,37 @@
+<tr style="display: none" forbidden="">
+    <td>ID:</td>
+    <td><input name="id" type="text" value="{{this.data.id}}" readonly="" tab_form_field=""></td>
+</tr>
+<tr style="display: none" forbidden="">
+    <td>ID родительской записи:</td>
+    <td>
+        <input name="{{this.data.parent_record}}" type="text" value="" data-parent_record="" readonly="" tab_form_field="">
+    </td>
+</tr>
+
+<tr multiple forbidden>
+    <td>Наименование:</td>
+    <td>
+        <input name="bank" type="text" record_id="" value="{{this.data.bank}}" readonly tab_form_field>
+    </td>
+</tr>
+<tr multiple="">
+    <td>Р/С:</td>
+    <td><input name="account_number" type="text" value="{{this.data.account_number}}" readonly="" tab_form_field=""></td>
+</tr>
+<tr multiple="">
+    <td>К/С:</td>
+    <td><input name="cor_account_num" type="text" value="{{this.data.cor_account_num}}" readonly="" tab_form_field=""></td>
+</tr>
+<tr multiple="">
+    <td>БИК:</td>
+    <td><input name="bik" type="text" value="{{this.data.bik}}" readonly="" tab_form_field=""></td>
+</tr>
+<tr multiple="">
+    <td>КПП:</td>
+    <td><input name="kpp" type="text" value="{{this.data.kpp}}" readonly="" tab_form_field=""></td>
+</tr>
+<tr multiple="">
+    <td>ИНН:</td>
+    <td><input name="inn" type="text" value="{{this.data.inn}}" readonly="" tab_form_field=""></td>
+</tr>

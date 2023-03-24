@@ -1,0 +1,51 @@
+<details title='block_one_document' nesting="2">
+    <summary>
+        <span>Документ</span>
+        <span><a href="" target="_blank" title_for="description; path" link_for="path">файл</a></span>
+        ${caption_buttons}
+    </summary>
+    <table class="tab_table">
+        <tr style="display: none" forbidden>
+            <td>ID:</td>
+            <td><input name="id" type="text" value="{{id}}" readonly tab_form_field></td>
+        </tr>
+        <tr style="display: none" forbidden>
+            <td>ID родительской записи:</td>
+            <td>
+                <input name="parent_record" type="text" value="" data-parent_record readonly tab_form_field>
+            </td>
+        </tr>
+        <tr>
+            <td>Документ:</td>
+            <td><input name="description" type="text" value="" title_for="path" readonly tab_form_field></td>
+        </tr>
+        <tr>
+            <td>Номер:</td>
+            <td><input name="number" class="" type="text" value="" readonly tab_form_field></td>
+        </tr>
+        <tr>
+            <td>Серия:</td>
+            <td><input name="series" class="" type="text" value="" readonly tab_form_field></td>
+        </tr>
+        <tr>
+            <td>Кем выдан:</td>
+            <td><input name="issuer" class="" type="text" value="" readonly tab_form_field></td>
+        </tr>
+        <tr>
+            <td>Когда:</td>
+            <td><input name="issue_date" class="" type="text" value="" readonly tab_form_field></td>
+        </tr>
+        <tr>
+            <td>Адрес:</td>
+            <td><input name="customer_address" class="" type="text" value="" readonly tab_form_field></td>
+        </tr>
+        <tr>
+            <td>Скан:</td>
+            <td><input name="path" class="attachment" type="text" value="" readonly tab_form_field attachment></td>
+        </tr>
+        <tr>
+            <td>Примечание:</td>
+            <td><input name="comment" type="text" value="" readonly tab_form_field></td>
+        </tr>
+    </table>
+</details>

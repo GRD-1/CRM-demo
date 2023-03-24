@@ -1,0 +1,50 @@
+<main class="two_column_page">
+    <aside class="sidebar">
+        <div>
+            <ul>
+                <li><a class='sidebar_link sidebar_link_active' href='/handbooks/handbook_contracts.html' target='_self'>Договоры</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_customers.html' target='_self'>Заказчики</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_measurements.html' target='_self'>Заявки</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_objects.html' target='_self'>Объекты</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_reports.html' target='_self'>Отчеты</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_departments.html' target='_self'>Подразделения</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_department_bank_accounts.html' target='_self'>Расчетные счета</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_employees.html' target='_self'>Сотрудники</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_payment_conditions.html' target='_self'>Схемы оплаты</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_estimate_conditions.html' target='_self'>Схемы расчета смет</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__employee_position.html' target='_self'>Список должности</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__source_type.html' target='_self'>Список источники</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__measurement_quality.html' target='_self'>Список качество заявки</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__measurement_method.html' target='_self'>Список способ обращения</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__contract_status.html' target='_self'>Список статусы договоров</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__measurement_status.html' target='_self'>Список статусы заявок</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__report_status.html' target='_self'>Список статусы отчетов</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__employee_status.html' target='_self'>Список статусы сотрудников</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__contract_type.html' target='_self'>Список типы договоров</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_measurement_type.html' target='_self'>Список типы заявок</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__contact_type.html' target='_self'>Список типы контактов</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__report_type.html' target='_self'>Список типы отчетов</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__project_type.html' target='_self'>Список типы проектов</a></li>
+                <li><a class='sidebar_link' href='/handbooks/handbook_list__marketing.html' target='_self'>Список типы рекламы</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <article class="main_window">
+        <div class="main_window_container page_handbooks">
+
+            <div class="header_mini">
+                <p>Справочник "{{handbook_name}}"</p>
+            </div>
+
+            <div class='handbook handbook_mini'>
+                {{> hb_contracts/all}}
+            </div>
+
+            <div class="footer_mini"></div>
+        </div>
+    </article>
+
+    <div id="hb_edit_form"></div>
+    <div id="dialog_box"></div>
+</main>

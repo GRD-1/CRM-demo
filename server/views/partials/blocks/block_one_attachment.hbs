@@ -1,0 +1,29 @@
+<details title='block_one_attachment' data-nesting="5">
+    <summary>
+        <span>дата</span>
+        <span><a href="" target="_blank" title_for="description; path" link_for="path">файл</a></span>
+        <span class="tab_form_buttons"><div class="tab_btn_del"><div></div></div></span>
+    </summary>
+    <table class="tab_table">
+        <tr style="display: none" forbidden>
+            <td>ID:</td>
+            <td><input name="id" type="text" value="{{id}}" readonly tab_form_field></td>
+        </tr>
+        <tr style="display: none" forbidden>
+            <td>ID родительской записи:</td>
+            <td>
+                <input name="parent_record" type="text" value="" data-parent_record readonly tab_form_field>
+            </td>
+        </tr>
+        <tr multiple>
+            <td>описание:</td>
+            <td><input name="description" type="text" value="" title_for="path" readonly tab_form_field></td>
+            <td class="tab_form_btn_plug"></td>
+        </tr>
+        <tr multiple>
+            <td>путь:</td>
+            <td><input name="path" class="attachment" type="text" value="" readonly tab_form_field attachment></td>
+            <td class="tab_form_btn_plug"></td>
+        </tr>
+    </table>
+</details>

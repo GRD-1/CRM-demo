@@ -1,0 +1,76 @@
+<tbody>
+    <tr forbidden>
+        <td>ID:</td>
+        <td><input name="id" type="text" value="{{#if customer}}{{customer}}{{else}}new_record{{/if}}" readonly tab_form_field></td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Псевдоним:</td>
+        <td><input name="customer_alias" class="" type="text" value="{{customer_alias}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Фамилия:</td>
+        <td><input name="customer_family" class="" type="text" value="{{customer_family}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Имя:</td>
+        <td><input name="customer_name" class="" type="text" value="{{customer_name}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Отчество:</td>
+        <td><input name="customer_patronymic" class="" type="text" value="{{customer_patronymic}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Полное имя:</td>
+        <td><input name="customer_fullname" class="" type="text" value="{{customer_fullname}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Организация:</td>
+        <td><input name="customer_jname" class="" type="text" value="{{customer_jname}}" readonly tab_form_field></td>
+    </tr>
+
+<!-- ++ GRD 21072022: закомментировано до лучших времен    -->
+<!--    <tr>-->
+<!--        <td class="single_column">-->
+<!--            <details>-->
+<!--                <summary>-->
+<!--                    <span>Источник</span>-->
+<!--                    <span title_for="marketing_type; referenced_customer; other">{{customer_source_param.caption}}</span>-->
+<!--                </summary>-->
+<!--                <table class="tab_table">-->
+<!--                    <tr primary_field multiple>-->
+<!--                        <td>Тип:</td>-->
+<!--                        <td>-->
+<!--                            <input name="source_type" class="paired_field active_field" type="text" record_id="{{source_type}}" value="{{source_type_title}}" readonly tab_form_field>-->
+<!--                            <div class="paired_field">-->
+<!--                                {{list__source_type}}-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr slave_field="{{customer_source_param.marketing_status}}" multiple>-->
+<!--                        <td>Реклама:</td>-->
+<!--                        <td>-->
+<!--                            <input name="source_marketing" class="paired_field active_field" type="text" record_id="{{customer_source_param.marketing_id}}" value="{{customer_source_param.marketing_value}}" readonly tab_form_field>-->
+<!--                            <div class="paired_field">-->
+<!--                                {{list__marketing}}-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr slave_field="{{customer_source_param.referenced_customer_status}}" multiple>-->
+<!--                        <td>Заказчик:</td>-->
+<!--                        <td>-->
+<!--                            <input name="source_customer" class="paired_field active_field" type="text" record_id="{{customer_source_param.referred_customer_id}}" value="{{customer_source_param.referred_customer_value}}" readonly tab_form_field>-->
+<!--                            <div class="paired_field">-->
+<!--                                {{list__referred_customer}}-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr slave_field="{{customer_source_param.other_status}}" multiple>-->
+<!--                        <td>Прочее:</td>-->
+<!--                        <td><input name="source_other" class="" type="text" record_id="{{customer_source_param.other_id}}" value="{{customer_source_param.other_value}}" readonly tab_form_field></td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+<!--            </details>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!-- -- GRD 21072022    -->
+</tbody>

@@ -1,0 +1,31 @@
+<section style="display: none" record_id = "{{#if record_id}}{{record_id}}{{else}}new_record{{/if}}"></section>
+<section class="tab_data">
+    <details {{#each customer_block_attributes}}{{@key}}={{this}} {{/each}} title="block_customer" data-nesting="1">
+        <summary>
+            <span recommended>Заказчик</span>
+            <span>
+                <input name="customer" class="paired_field {{#if customer_block_attributes.data-addfromlist}}{{else}}active_field{{/if}}" type="text" record_id="{{customer}}" value="{{customer_fullname}}" placeholder="новая запись" readonly tab_form_field>
+                <div class="paired_field {{#if customer_block_attributes.data-addfromlist}}active_field{{/if}}">
+                    {{list__customer}}
+                </div>
+            </span>
+
+            {{#if customer_block_attributes.data-addfromlist_btn}}
+                <span class="tab_form_buttons"><div class="tab_btn_addfromlist"><div></div></div></span>
+            {{/if}}
+            <span class="tab_form_btn_plug"></span>
+        </summary>
+        <table class="tab_table">
+            {{> blocks/block_customer}}
+        </table>
+    </details>
+
+    <table class='tab_table'>
+        <tr>
+            <td>Глоб коэф заказчика:</td>
+            <td><input name="customer_coef" class="" type="number" value="{{customer_coef}}" readonly tab_form_field></td>
+        </tr>
+    </table>
+</section>
+<br>
+{{> comment}}

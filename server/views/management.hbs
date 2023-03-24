@@ -1,0 +1,49 @@
+<main id="page_management" class="two_column_page">
+    <aside class="sidebar">
+        <div class="page_management_nav_header">
+            <div id="logs_header_nav" class="nav_header_category" nav_category="logs" style="display: block">
+                <button id="multi_window_mode" data-tooltip="Переключение режима многозадачности"><i class="fa fa-columns" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="page_management_nav_sidebar">
+            <ul>
+                <li><a class='sidebar_link sidebar_link_active' href='/management/logs_errors' target='_self' nav_category="logs">Логи ошибок</a></li>
+                <li><a class='sidebar_link' href='/management/log_events' target='_self' nav_category="logs">Логи событий БД</a></li>
+                <li><a class='sidebar_link' href='/management/logs_pg' target='_self' nav_category="logs">Логи Postgres</a></li>
+                <li><a class='sidebar_link' href='/management/handbook_users_home' target='_self'>Пользователи сотрудники</a></li>
+                <li><a class='sidebar_link' href='/management/handbook_users_web' target='_self'>Пользователи заказчики</a></li>
+                <li><a class='sidebar_link' href='/management/erase' target='_self'>Удаление данных</a></li>
+                <li><a class='sidebar_link' href='/management/backup' target='_self'>Резервное копирование</a></li>
+                <li><a class='sidebar_link' href='/management/settings_general' target='_self'>Общие настройки</a></li>
+            </ul>
+        </div>
+        <div class="page_management_nav_footer">
+            <div id="logs_footer_nav" class="nav_footer_category" nav_category="logs" style="display: block">
+                <form id="filter_logs">
+                    <div class="filter_select">
+                        {{filter_list__users}}
+                    </div>
+                    <div class="filter_select">
+                        <select title="filter_list__err_class" class="chosen_select before_parsing" data-placeholder="Тип ошибки">
+                            <option selected disabled>Тип ошибки</option>
+                            <option>CLError</option>
+                            <option>SRVError</option>
+                            <option>DBError</option>
+                            <option>undefined</option>
+                        </select>
+                    </div>
+                    <div class="filter_date">
+                        <input name="period_start" placeholder="Период с" onfocus="(this.type='date')">
+                        <input name="period_end" placeholder="Период по" onfocus="(this.type='date')">
+                    </div>
+                    <button id="filter_logs_btn" type="submit">Поиск</button>
+                </form>
+            </div>
+        </div>
+    </aside>
+    <article class="main_window">
+        <div class="page_management">
+            {{content}}
+        </div>
+    </article>
+</main>

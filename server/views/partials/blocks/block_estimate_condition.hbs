@@ -1,0 +1,57 @@
+<tbody>
+    <tr style="display: none" forbidden>
+        <td>ID:</td>
+        <td><input name="id" type="text" value="{{#if estimate_conditions}}{{estimate_conditions}}{{else}}new_record{{/if}}" readonly tab_form_field></td>
+    </tr>
+    <tr style="display: none" forbidden>
+        <td>ID родительской записи:</td>
+        <td>
+            <input name="customer" type="text" value="{{customer}}" data-parent_record readonly tab_form_field>
+        </td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Наименование:</td>
+        <td><input name="estcond_title" class="" type="text" value="{{estcond_title}}" readonly tab_form_field></td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Схема по умолчанию:</td>
+        <td>
+            <input name="estcond_default" class="paired_field active_field" type="text" record_id="{{estcond_default}}" value="{{estcond_default_title}}" readonly tab_form_field>
+            <div class="paired_field">
+                {{list__true_false}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Глоб коэф сметы:</td>
+        <td><input name="estcond_coef" class="" type="number" value="{{estcond_coef}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Специальный прайс:</td>
+        <td><input name="estcond_special_price" class="attachment" type="text" value="{{estcond_special_price}}" readonly tab_form_field attachment></td>
+    </tr>
+    <tr>
+        <td>Удаленный контроль:</td>
+        <td><input name="estcond_remote_control" class="" type="number" value="{{estcond_remote_control}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Коэф. удаленности:</td>
+        <td><input name="estcond_remoteness" class="" type="number" value="{{estcond_remoteness}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Коэф. стесненности:</td>
+        <td><input name="estcond_restrictions" class="" type="number" value="{{estcond_restrictions}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Скидка:</td>
+        <td><input name="estcond_discount" class="" type="number" value="{{estcond_discount}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Хозяйственные работы:</td>
+        <td><input name="estcond_chores" class="" type="number" value="{{estcond_chores}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Накладные расходы:</td>
+        <td><input name="estcond_overhead_cost" class="" type="number" value="{{estcond_overhead_cost}}" readonly tab_form_field></td>
+    </tr>
+</tbody>

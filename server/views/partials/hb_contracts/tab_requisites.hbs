@@ -1,0 +1,47 @@
+<section style="display: none" record_id = {{record_id}}></section>
+<section class="tab_data">
+    <div title="block_customer_identity">
+        {{> blocks/block_customer_identity}}
+    </div>
+    <div class="summary">
+        <span>Реквизиты подразделения</span>
+    </div>
+    <details {{#each department_block_attributes}}{{@key}}={{this}} {{/each}} title="block_department" data-nesting="1">
+        <summary>
+            <span>Подразделение</span>
+            <span>
+                <input name="department" class="paired_field {{#if department_block_attributes.data-addfromlist}}{{else}}active_field{{/if}}" type="text" record_id="{{department}}" value="{{department_title}}" placeholder="новая запись" readonly tab_form_field>
+                <div class="paired_field {{#if department_block_attributes.data-addfromlist}}active_field{{/if}}">
+                    {{list__contract_department}}
+                </div>
+            </span>
+
+            {{#if department_block_attributes.data-addfromlist_btn}}
+                <span class="tab_form_buttons"><div class="tab_btn_addfromlist"><div></div></div></span>
+            {{/if}}
+            <span class="tab_form_btn_plug"></span>
+        </summary>
+        <table class="tab_table">
+            {{> blocks/block_department}}
+        </table>
+    </details>
+    <details {{#each dba_block_attributes}}{{@key}}={{this}} {{/each}} title="block_department_bank_account" data-nesting="2" data-owned_by="block_department">
+        <summary>
+            <span>Группа реквизитов:</span>
+            <span>
+            <input name="dba" class="paired_field {{#if dba_block_attributes.data-addfromlist}}{{else}}active_field{{/if}}" type="text" record_id="{{dba}}" value="{{dba_title}}" placeholder="новая запись" readonly tab_form_field>
+            <div class="paired_field {{#if dba_block_attributes.data-addfromlist}}active_field{{/if}}">
+                {{list__dba}}
+            </div>
+        </span>
+
+            {{#if dba_block_attributes.data-addfromlist_btn}}
+                <span class="tab_form_buttons"><div class="tab_btn_addfromlist"><div></div></div></span>
+            {{/if}}
+            <span class="tab_form_btn_plug"></span>
+        </summary>
+        <table class="tab_table">
+            {{> blocks/block_department_bank_account}}
+        </table>
+    </details>
+</section>

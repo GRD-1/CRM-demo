@@ -1,0 +1,37 @@
+<div class="ef_base"></div>
+            <div class='ef_container' {{form_task}}>
+                <div class='ef_wrapper'>
+                    <div>
+                        <div class='ef_title'>
+                            <span class='ef_title_title'>Справочник "{{handbook_alias}}":  </span>
+                            <span class='ef_title_method'>{{handbook_method}}</span>
+                        </div>
+            
+                        <div class='ef_alert'></div>
+            
+                        <div class='ef_data tabs'>
+                            <div class="tab_headers"><div class="row no-gutters"><div class="col order-1">
+                            <a class="tabs_link tabs_link_active single_tab" href='#tab_main' undefined undefined>Основное</a>
+                        </div></div></div>
+                            <div class="tab_body"><form class="tabs_pane tabs_pane_show" id="tab_main"><section style="display: none" record_id = "{{#if record_id}}{{record_id}}{{else}}new_record{{/if}}"></section>
+<section class="tab_data">
+    <table class='tab_table'>
+        <tr data-obligatory_field>
+            <td>Наименование:</td>
+            <td><input name="title" class="" type="text" value="{{title}}" readonly tab_form_field></td>
+        </tr>
+    </table>
+</section>
+<br>
+{{> comment}}</form></div>
+                        </div>
+            
+                        <div class='ef_buttons'>
+                            <div class="btn_wrapper">
+                                <button class="btn" id="btn_save" formaction="{{handbook_path}}" value="{{handbook_title}}" record_id="{{record_id}}">Сохранить</button>
+                                <button class="btn" id="btn_cancel">Выход</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

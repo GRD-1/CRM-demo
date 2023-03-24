@@ -1,0 +1,26 @@
+<section style="display: none" record_id = {{record_id}}></section>
+<section class="tab_data">
+    <table class="tab_table">
+        <tr>
+            <td>Логин:</td>
+            <td><input name="login" class="" type="text" value="{{login}}" readonly tab_form_field></td>
+        </tr>
+        <tr>
+            <td>Никнейм:</td>
+            <td><input name="nickname" class="" type="text" value="{{nickname}}" readonly tab_form_field></td>
+        </tr>
+        <tr>
+            <td>Аватар:</td>
+            <td><input name="avatar" class="" type="text" value="{{avatar}}" readonly tab_form_field attachment></td>
+        </tr>
+        <tr>
+            <td>Оповещения:</td>
+            <td>
+                <input name="notifications" class="paired_field active_field" type="text" record_id="{{notifications}}" value="{{notifications_title}}" readonly tab_form_field>
+                <div class="paired_field">
+                    {{list__true_false}}
+                </div>
+            </td>
+        </tr>
+    </table>
+</section>

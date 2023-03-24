@@ -1,0 +1,56 @@
+<tbody>
+    <tr style="display: none" forbidden>
+        <td>ID:</td>
+        <td><input name="id" type="text" value="{{#if object}}{{object}}{{else}}new_record{{/if}}" readonly tab_form_field></td>
+    </tr>
+    <tr style="display: none" forbidden>
+        <td>ID родительской записи:</td>
+        <td>
+            <input name="customer" type="text" value="{{customer}}" data-parent_record readonly tab_form_field>
+        </td>
+    </tr>
+    <tr forbidden>
+        <td>Номер объекта:</td>
+        <td><input name="object_number" class="" type="text" value="{{object_number}}" placeholder="ID" readonly tab_form_field></td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Псевдоним:</td>
+        <td><input name="object_title" class="" type="text" value="{{object_title}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Город:</td>
+        <td><input name="object_city" class="" type="text" value="{{object_city}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Район:</td>
+        <td><input name="object_district" class="" type="text" value="{{object_district}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Улица:</td>
+        <td><input name="object_street" class="" type="text" value="{{object_street}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Номер дома:</td>
+        <td><input name="object_house_number" class="" type="text" value="{{object_house_number}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Строение:</td>
+        <td><input name="object_building" class="" type="text" value="{{object_building}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Литера:</td>
+        <td><input name="object_letter" class="" type="text" value="{{object_letter}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Квартира:</td>
+        <td><input name="object_apartment_number" class="" type="text" value="{{object_apartment_number}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>Индекс:</td>
+        <td><input name="object_post_index" class="" type="text" value="{{object_post_index}}" readonly tab_form_field></td>
+    </tr>
+    <tr forbidden>
+        <td>Адрес:</td>
+        <td><input name="object_address" class="" type="text" value="{{object_address}}" readonly tab_form_field></td>
+    </tr>
+</tbody>

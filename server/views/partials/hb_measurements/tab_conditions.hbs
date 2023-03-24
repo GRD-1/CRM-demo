@@ -1,0 +1,28 @@
+<section style="display: none" record_id = {{record_id}}></section>
+<section class="tab_data">
+    <div class="summary">
+        <span>Глоб коэф заказчика:</span>
+        <span>{{customer_coef}}</span>
+        <span class="tab_form_btn_plug" ef_only></span>
+    </div>
+
+    <details {{#each estimate_cond_block_attributes}}{{@key}}={{this}} {{/each}} title="block_estimate_condition" data-nesting="2">
+        <summary>
+            <span>Схема расчета</span>
+            <span>
+                <input name="estimate_conditions" class="paired_field {{#if estimate_cond_block_attributes.data-addfromlist}}{{else}}active_field{{/if}}" type="text" record_id="{{estimate_conditions}}" value="{{estcond_title}}" placeholder="новая запись" readonly tab_form_field>
+                <div class="paired_field {{#if estimate_cond_block_attributes.data-addfromlist}}active_field{{/if}}">
+                    {{list__estimate_conditions}}
+                </div>
+            </span>
+
+            {{#if estimate_cond_block_attributes.data-addfromlist_btn}}
+                <span class="tab_form_buttons"><div class="tab_btn_addfromlist"><div></div></div></span>
+            {{/if}}
+            <span class="tab_form_btn_plug"></span>
+        </summary>
+        <table class='tab_table'>
+            {{> blocks/block_estimate_condition}}
+        </table>
+    </details>
+</section>

@@ -1,0 +1,88 @@
+<section style="display: none" record_id = "{{#if record_id}}{{record_id}}{{else}}new_record{{/if}}"></section>
+<section class="tab_data">
+    <details {{#each customer_block_attributes}}{{@key}}={{this}} {{/each}} title="block_customer" data-nesting="1">
+        <summary data-obligatory_field>
+            <span recommended>Заказчик</span>
+            <span>
+                <input name="customer" class="paired_field {{#if customer_block_attributes.data-addfromlist}}{{else}}active_field{{/if}}" type="text" record_id="{{customer}}" value="{{customer_alias}}" placeholder="новая запись" readonly tab_form_field>
+                <div class="paired_field {{#if customer_block_attributes.data-addfromlist}}active_field{{/if}}">
+                    {{list__customer}}
+                </div>
+            </span>
+
+            {{#if customer_block_attributes.data-addfromlist_btn}}
+                <span class="tab_form_buttons"><div class="tab_btn_addfromlist"><div></div></div></span>
+            {{else}}
+                <span class="tab_form_btn_plug"></span>
+            {{/if}}
+        </summary>
+        <table class="tab_table">
+            {{> blocks/block_customer}}
+        </table>
+    </details>
+
+    <details {{#each object_block_attributes}}{{@key}}={{this}} {{/each}} title="block_object" data-nesting="2">
+        <summary data-obligatory_field>
+            <span>Объект</span>
+            <span>
+                <input name="object" class="paired_field {{#if object_block_attributes.data-addfromlist}}{{else}}active_field{{/if}}" type="text" record_id="{{object}}" value="{{object_title}}" placeholder="новая запись" readonly tab_form_field>
+                <div class="paired_field {{#if object_block_attributes.data-addfromlist}}active_field{{/if}}">
+                    {{list__object}}
+                </div>
+            </span>
+
+            {{#if object_block_attributes.data-addfromlist_btn}}
+                <span class="tab_form_buttons"><div class="tab_btn_addfromlist"><div></div></div></span>
+            {{else}}
+                <span class="tab_form_btn_plug"></span>
+            {{/if}}
+        </summary>
+        <table class="tab_table">
+            {{> blocks/block_object}}
+        </table>
+    </details>
+
+    <details {{#each measurement_block_attributes}}{{@key}}={{this}} {{/each}} title="block_measurement" data-nesting="3">
+        <summary data-obligatory_field>
+            <span>Заявка</span>
+            <span>
+                <input name="measurement" class="paired_field {{#if measurement_block_attributes.data-addfromlist}}{{else}}active_field{{/if}}" type="text" record_id="{{measurement}}" value="{{measurement_number}}" placeholder="новая запись"
+                       readonly tab_form_field>
+                <div class="paired_field {{#if measurement_block_attributes.data-addfromlist}}active_field{{/if}}">
+                    {{list__measurement}}
+                </div>
+            </span>
+
+            {{#if measurement_block_attributes.data-addfromlist_btn}}
+                <span class="tab_form_buttons"><div class="tab_btn_addfromlist"><div></div></div></span>
+            {{/if}}
+            <span class="tab_form_btn_plug"></span>
+        </summary>
+        <table class='tab_table'>
+            {{> blocks/block_measurement}}
+        </table>
+    </details>
+
+    <details {{#each contract_block_attributes}}{{@key}}={{this}} {{/each}} title="block_contract" data-nesting="4">
+        <summary>
+            <span>Договор</span>
+            <span>
+                <input name="contract" class="paired_field {{#if contract_block_attributes.data-addfromlist}}{{else}}active_field{{/if}}" type="text" record_id="{{contract}}" value="{{contract_number}}" placeholder="новая запись" readonly tab_form_field>
+                <div class="paired_field {{#if contract_block_attributes.data-addfromlist}}active_field{{/if}}">
+                    {{list__contract}}
+                </div>
+            </span>
+
+            {{#if contract_block_attributes.data-addfromlist_btn}}
+                <span class="tab_form_buttons"><div class="tab_btn_addfromlist"><div></div></div></span>
+            {{else}}
+                <span class="tab_form_btn_plug"></span>
+            {{/if}}
+        </summary>
+        <table class='tab_table'>
+            {{> blocks/block_contract}}
+        </table>
+    </details>
+</section>
+<br>
+{{> comment}}

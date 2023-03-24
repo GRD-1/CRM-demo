@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*			page_login (страница авторизации)																									*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+/*     переменные                                                                                */
+/*-----------------------------------------------------------------------------------------------*/
+.page_login form {
+  width: 500px;
+  height: 250px;
+  margin: 20vh auto;
+  text-align: center;
+  padding: 50px;
+  background-color: lightgray;
+  border: 1px solid black; }
+  .page_login form > div {
+    height: 35px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    margin-bottom: 15px; }
+    .page_login form > div input, .page_login form > div select {
+      width: 275px; }
+    .page_login form > div:last-child {
+      height: 40px;
+      float: right;
+      margin-top: 15px; }
+      .page_login form > div:last-child button {
+        width: 130px; }
+        .page_login form > div:last-child button:last-child {
+          margin-left: 15px; }

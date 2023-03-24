@@ -1,0 +1,49 @@
+<tbody>
+    <tr style="display: none" forbidden>
+        <td>ID:</td>
+        <td><input name="id" type="text" value="{{#if dba}}{{dba}}{{else}}new_record{{/if}}" readonly tab_form_field></td>
+    </tr>
+    <tr style="display: none" forbidden>
+        <td>ID родительской записи:</td>
+        <td>
+            <input name="department" type="text" value="{{department}}" data-parent_record readonly tab_form_field>
+        </td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Наименование:</td>
+        <td><input name="dba_title" class="" type="text" value="{{dba_title}}" readonly tab_form_field></td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Основной счет:</td>
+        <td>
+            <input name="dba_default" class="paired_field active_field" type="text" record_id="{{dba_default}}" value="{{dba_default_title}}" readonly tab_form_field>
+            <div class="paired_field">
+                {{list__true_false}}
+            </div>
+        </td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Банк:</td>
+        <td><input name="dba_bank" class="" type="text" value="{{dba_bank}}" readonly tab_form_field></td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Р/С:</td>
+        <td><input name="dba_account_number" class="" type="text" value="{{dba_account_number}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>К/С:</td>
+        <td><input name="dba_cor_account_number" class="" type="text" value="{{dba_cor_account_number}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>БИК:</td>
+        <td><input name="dba_bik" class="" type="text" value="{{dba_bik}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>КПП:</td>
+        <td><input name="dba_kpp" class="" type="text" value="{{dba_kpp}}" readonly tab_form_field></td>
+    </tr>
+    <tr>
+        <td>ИНН банка:</td>
+        <td><input name="dba_inn" class="" type="text" value="{{dba_inn}}" readonly tab_form_field></td>
+    </tr>
+</tbody>

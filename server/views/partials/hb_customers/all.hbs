@@ -1,0 +1,97 @@
+                <div class="hb_wrapper">
+                    <div class="col1">
+                        <form id="filter_form">
+                            <section class='col1_top'>
+                                <div>
+                                    <button id ='btn_reload' data-tooltip="Используйте выпадающие списки для получения нужного фильтра данных" formaction="/handbooks/handbook_customers.html" value="Заказчики">Обновить</button>
+                                </div>
+                                <div>
+                                    <button id='btn_default' data-tooltip="Нажмите, чтобы сбросить фильтры в исходное состояние" formaction="/handbooks/handbook_customers.html" value="Заказчики">По умолчанию</button>
+                                </div>
+                            </section>
+
+                            <section id="universal_search_container">
+                                <div>
+                                    <input id="universal_search" name="universal_search" type="text" placeholder="Искать везде">
+                                </div>
+                            </section>
+
+                            <section class='col1_bottom'>
+                                <div class="filter_select">
+                                    {{filter_list__customer}}
+                                </div>
+                                <div class="filter_select">
+                                    {{filter_list__source_type}}
+                                </div>
+                                <br>
+                                <div class="filter_checkbox">
+                                    <label for='ChBox_physical'>Физ.лица</label>
+                                    <input type='checkbox' id='ChBox_physical' checked tabindex="2">
+                                </div>
+                                <div class="filter_checkbox">
+                                    <label for='ChBox_juridical'>Юр.лица</label>
+                                    <input type='checkbox' id='ChBox_juridical' checked tabindex="3">
+                                </div>
+                                <div class="filter_checkbox">
+                                    <label for='delete_mark'>на удаление</label>
+                                    <input type='checkbox' id='delete_mark' tabindex="4">
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+
+                    <div class="col2">
+                        <section class='col2_top'>
+                            <button id="btn_add" data-tooltip="Перейти к созданию записи [shift + T]" formaction="/handbooks/handbook_list.html" value="Список ..."><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            <button id="btn_update" data-tooltip="Перейти к редактированию записи [shift + E]" formaction="/handbooks/handbook_list.html" value="Список ..."><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                            <button id="btn_delete" data-tooltip="Пометить запись на удаление [shift + D]" formaction="/handbooks/handbook_list.html" value="Список ..."><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                        </section>
+
+                        <section class='col2_bottom'>
+                            <div class="central_table">
+                                {{>hb_customers/central_table}}
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="col3">
+                        <section class='col3_bottom'>
+                            <div class='Details_table tabs'>
+                                <div class='Details_table_head container'>
+                                    <div class="row">
+                                        <div class="col-24 order-3">
+                                            <div class="row">
+                                                <a class="tabs_link tabs_link_active" href='#tab_main'>Основное</a>
+                                                <a class="tabs_link" href='#tab_contacts'>Контакты</a>
+                                                <a class="tabs_link" href='#tab_attachments'>Приложения</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-24">
+                                            <div class="row">
+                                                <a class="tabs_link" href='#tab_documents'>Документы</a>
+                                                <a class="tabs_link" href='#tab_personal_account'>ЛК</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='Details_table_body'>
+                                    <form class="tabs_pane tabs_pane_show" id="tab_main">
+                                        {{>hb_customers/tab_main}}
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_contacts">
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_attachments">
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_documents">
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_personal_account">
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>

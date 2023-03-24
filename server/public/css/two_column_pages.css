@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*			two_column_pages (двухколоночные страницы: справочники, админка, о программе)														*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+/*     переменные                                                                                */
+/*-----------------------------------------------------------------------------------------------*/
+.two_column_page {
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: stretch;
+      align-items: stretch; }
+  .two_column_page .sidebar {
+    width: 20%;
+    height: 89vh;
+    padding: 1.2% 0 1%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    background-color: lightgray;
+    border-right: 2px solid #8080805c; }
+    .two_column_page .sidebar > div {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      padding: 0 6%; }
+      .two_column_page .sidebar > div details {
+        padding-left: 3%; }
+        .two_column_page .sidebar > div details summary:focus {
+          outline: none; }
+      .two_column_page .sidebar > div summary a, .two_column_page .sidebar > div li a {
+        display: inline-block;
+        height: inherit;
+        padding: 3px 15px; }
+        .two_column_page .sidebar > div summary a, .two_column_page .sidebar > div summary a:link, .two_column_page .sidebar > div summary a:visited, .two_column_page .sidebar > div summary a:active, .two_column_page .sidebar > div summary a:hover, .two_column_page .sidebar > div li a, .two_column_page .sidebar > div li a:link, .two_column_page .sidebar > div li a:visited, .two_column_page .sidebar > div li a:active, .two_column_page .sidebar > div li a:hover {
+          text-decoration: none;
+          color: #212529; }
+        .two_column_page .sidebar > div summary a:hover, .two_column_page .sidebar > div summary a.sidebar_link_active, .two_column_page .sidebar > div li a:hover, .two_column_page .sidebar > div li a.sidebar_link_active {
+          background-color: #9a9a9a96;
+          color: black; }
+  .two_column_page .main_window {
+    width: 80%;
+    height: 89vh; }
+    .two_column_page .main_window .main_window_container {
+      width: 100%;
+      height: 100%;
+      text-align: justify;
+      border: 0; }
+      .two_column_page .main_window .main_window_container.page_management {
+        padding: 3% 1% 3% 1%; }
+      .two_column_page .main_window .main_window_container.page_handbooks {
+        width: 98%;
+        height: 95%;
+        margin: 1.5% 1% 1.5% 1%;
+        border: 1px solid black;
+        border-radius: 2px; }
+      .two_column_page .main_window .main_window_container.page_about_program {
+        overflow: auto;
+        padding: 3% 20%; }
+        .two_column_page .main_window .main_window_container.page_about_program li {
+          list-style: square;
+          padding: 10px 0 10px 10px; }

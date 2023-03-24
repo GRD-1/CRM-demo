@@ -1,0 +1,44 @@
+<tbody>
+<tr style="display: none" forbidden>
+    <td>ID:</td>
+    <td><input name="id" type="text" value="{{#if employee}}{{employee}}{{else}}new_record{{/if}}" readonly tab_form_field></td>
+</tr>
+<tr forbidden>
+    <td>ID сотрудника:</td>
+    <td><input name="employee_number" type="text" value="{{employee_number}}" placeholder="ID" readonly tab_form_field></td>
+</tr>
+<tr data-obligatory_field>
+    <td>Фамилия:</td>
+    <td><input name="employee_family_name" class="" type="text" value="{{employee_family_name}}" readonly tab_form_field></td>
+</tr>
+<tr data-obligatory_field>
+    <td>Имя:</td>
+    <td><input name="employee_first_name" class="" type="text" value="{{employee_first_name}}" readonly tab_form_field></td>
+</tr>
+<tr>
+    <td>Отчество:</td>
+    <td><input name="employee_patronymic" class="" type="text" value="{{employee_patronymic}}" readonly tab_form_field></td>
+</tr>
+<tr>
+    <td>Полное имя:</td>
+    <td><input name="employee_full_name" class="" type="text" value="{{employee_full_name}}" readonly tab_form_field></td>
+</tr>
+<tr data-obligatory_field>
+    <td>Должность:</td>
+    <td>
+        <input name="employee_position" class="paired_field active_field" type="text" record_id="{{employee_position}}" value="{{employee_position_title}}" readonly tab_form_field>
+        <div class="paired_field">
+            {{list__employee_position}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>Статус:</td>
+    <td>
+        <input name="employee_status" class="paired_field active_field" type="text" record_id="{{employee_status}}" value="{{employee_status_title}}" readonly tab_form_field>
+        <div class="paired_field">
+            {{list__employee_status}}
+        </div>
+    </td>
+</tr>
+</tbody>

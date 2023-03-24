@@ -1,0 +1,78 @@
+<tbody>
+    <tr style="display: none" forbidden>
+        <td>ID:</td>
+        <td><input name="id" type="text" value="{{#if measurement}}{{measurement}}{{else}}new_record{{/if}}" readonly tab_form_field></td>
+    </tr>
+    <tr style="display: none" forbidden>
+        <td>ID родительской записи:</td>
+        <td>
+            <input name="object" type="text" value="{{object}}" data-parent_record readonly tab_form_field>
+        </td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Тип заявки:</td>
+        <td>
+            <input name="measurement_type" class="paired_field active_field" type="text" record_id="{{measurement_type}}" value="{{measurement_type_title}}" readonly tab_form_field>
+            <div class="paired_field">
+                {{list__measurement_type}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Качество заявки:</td>
+        <td>
+            <input name="measurement_quality" class="paired_field active_field" type="text" record_id="{{measurement_quality}}" value="{{measurement_quality_title}}" readonly tab_form_field>
+            <div class="paired_field">
+                {{list__measurement_quality}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Статус заявки:</td>
+        <td>
+            <input name="measurement_status" class="paired_field active_field" type="text" record_id="{{measurement_status}}" value="{{measurement_status_title}}"
+                   readonly tab_form_field>
+            <div class="paired_field">
+                {{list__measurement_status}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Способ обращения</td>
+        <td>
+            <input name="measurement_method" class="paired_field active_field" type="text" record_id="{{measurement_method}}" value="{{measurement_method_title}}"
+                   readonly tab_form_field>
+            <div class="paired_field">
+                {{list__measurement_method}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Приемка у застройщика</td>
+        <td>
+            <input name="object_acceptance" class="paired_field active_field" type="text" record_id="{{object_acceptance}}" value="{{object_acceptance_title}}"
+                   readonly tab_form_field>
+            <div class="paired_field">
+                {{list__true_false}}
+            </div>
+        </td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Подразделение:</td>
+        <td>
+            <input name="measurement_department" class="paired_field active_field" type="text" record_id="{{measurement_department}}" value="{{measurement_department_title}}" readonly tab_form_field>
+            <div class="paired_field">
+                {{list__measurement_department}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Дата заявки:</td>
+        <td>
+            <input name="measurement_date_of_request" class="paired_field active_field" type="text" value="{{measurement_date_of_request}}" readonly tab_form_field>
+            <div class="paired_field">
+                <input class="" type="date" tabindex="">
+            </div>
+        </td>
+    </tr>
+</tbody>

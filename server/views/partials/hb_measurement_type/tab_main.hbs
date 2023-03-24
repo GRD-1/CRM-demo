@@ -1,0 +1,15 @@
+<section style="display: none" record_id = "{{#if record_id}}{{record_id}}{{else}}new_record{{/if}}"></section>
+<section class="tab_data">
+    <table class='tab_table'>
+        <tr>
+            <td>Тип заявки:</td>
+            <td><input name="title" class="" type="text" value="{{measurement_type_title}}" readonly tab_form_field></td>
+        </tr>
+        <tr>
+            <td>Суффикс:</td>
+            <td><input name="suffix" class="" type="text" value="{{measurement_suffix}}" readonly tab_form_field></td>
+        </tr>
+    </table>
+</section>
+<br>
+{{> comment}}

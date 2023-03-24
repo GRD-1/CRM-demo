@@ -1,0 +1,49 @@
+<tbody>
+    <tr style="display: none" forbidden>
+        <td>ID:</td>
+        <td><input name="id" type="text" value="{{#if contract}}{{contract}}{{else}}new_record{{/if}}" readonly tab_form_field></td>
+    </tr>
+    <tr style="display: none" forbidden>
+        <td>ID родительской записи:</td>
+        <td>
+            <input name="measurement" type="text" value="{{measurement}}" data-parent_record readonly tab_form_field>
+        </td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Тип договора:</td>
+        <td>
+            <input name="contract_type" class="paired_field active_field" type="text" record_id="{{contract_type}}" value="{{contract_type_title}}" readonly tab_form_field>
+            <div class="paired_field">
+                {{list__contract_type}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Статус:</td>
+        <td>
+            <input name="contract_status" class="paired_field active_field" type="text" record_id="{{contract_status}}" value="{{contract_status_title}}" tabindex=""
+                   readonly tab_form_field>
+            <div class="paired_field">
+                {{list__contract_status}}
+            </div>
+        </td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Подразделение:</td>
+        <td>
+            <input name="contract_department" class="paired_field active_field" type="text" record_id="{{contract_department}}" value="{{contract_department_title}}" readonly tab_form_field>
+            <div class="paired_field">
+                {{list__contract_department}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Дата подписания:</td>
+        <td>
+            <input name="ctr_date_of_signing" class="paired_field active_field" type="text" value="{{ctr_date_of_signing}}" tabindex="" readonly tab_form_field>
+            <div class="paired_field">
+                <input class="" type="date" value={{ctr_date_of_signing}} tabindex="">
+            </div>
+        </td>
+    </tr>
+</tbody>

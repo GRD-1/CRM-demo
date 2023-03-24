@@ -1,0 +1,21 @@
+{{#each contact_persons}}
+    {{this.caption}}
+    {{#each this.contact_persons}}
+        {{this.first_part}}
+        {{#each this.second_part}}
+            {{#if this.blocked}}
+                {{#each this.contacts}}
+                    {{this.first_part}}
+                    {{this.second_part}}
+                {{/each}}
+            {{else}}
+                {{#each this.contacts}}
+                    {{this.first_part}}
+                    {{list__contact_type}}
+                    {{this.second_part}}
+                {{/each}}
+            {{/if}}
+        {{/each}}
+        {{this.third_part}}
+    {{/each}}
+{{/each}}

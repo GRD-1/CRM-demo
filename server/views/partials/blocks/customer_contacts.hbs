@@ -1,0 +1,17 @@
+{{#each contacts_arr}}
+    {{this.caption}}
+    <table class="tab_table">
+        {{#if this.blocked}}
+            {{#each this.contacts}}
+                {{this.first_part}}
+                {{this.second_part}}
+            {{/each}}
+        {{else}}
+            {{#each this.contacts}}
+                {{this.first_part}}
+                {{list__contact_type}}
+                {{this.second_part}}
+            {{/each}}
+        {{/if}}
+    </table>
+{{/each}}

@@ -1,0 +1,145 @@
+                <div class="hb_wrapper">
+                    <div class="col1">
+                        <form id="filter_form">
+                            <section class='col1_top'>
+                                <div>
+                                    <button id='btn_reload' data-tooltip="Используйте выпадающие списки для получения нужного фильтра данных" formaction='/handbooks/handbook_contracts.html' value="Договоры">Обновить</button>
+                                </div>
+                                <div>
+                                    <button id='btn_default' data-tooltip="Нажмите, чтобы сбросить фильтры в исходное состояние" formaction='/handbooks/handbook_contracts.html' value="Договоры">По умолчанию</button>
+                                </div>
+                            </section>
+
+                            <section id="universal_search_container">
+                                <div>
+                                    <input id="universal_search" name="universal_search" type="text" placeholder="Искать везде">
+                                </div>
+                            </section>
+
+                            <section class='col1_bottom'>
+                                <div class="filter_select">
+                                    {{filter_list__customer}}
+                                </div>
+                                <div class="filter_select">
+                                    {{filter_list__object}}
+                                </div>
+                                <div class="filter_select">
+                                    {{filter_list__contract}}
+                                </div>
+                                <br>
+                                <div class="filter_select">
+                                    {{filter_list__contract_type}}
+                                </div>
+                                <div class="filter_select">
+                                    {{filter_list__contract_status}}
+                                </div>
+                                <br>
+                                <div class="filter_select">
+                                    {{filter_list__foreman}}
+                                </div>
+                                <div class="filter_select">
+                                    {{filter_list__designer}}
+                                </div>
+                                <br>
+                                <div class="filter_date">
+                                    <input name='period_start' type="text" placeholder="Период с" onfocus="(this.type='date')" tabindex="8" value={{period_start}}>
+                                    <input name='period_end' type="text" placeholder="Период по" onfocus="(this.type='date')" tabindex="9" value={{period_end}}>
+                                </div>
+                                <br>
+                                <div class="filter_checkbox">
+                                    <label for='ChBox_reinovation'>ремонт</label>
+                                    <input type='checkbox' id='ChBox_reinovation' checked tabindex="10">
+                                </div>
+                                <div class="filter_checkbox">
+                                    <label for='ChBox_building'>строительство</label>
+                                    <input type='checkbox' id='ChBox_building' checked tabindex="11">
+                                </div>
+                                <div class="filter_checkbox">
+                                    <label for='ChBox_design'>дизайн</label>
+                                    <input type='checkbox' id='ChBox_design' checked tabindex="12">
+                                </div>
+                                <div class="filter_checkbox">
+                                    <label for='ChBox_furniture'>мебель</label>
+                                    <input type='checkbox' id='ChBox_furniture' checked tabindex="13">
+                                </div>
+                                <div class="filter_checkbox">
+                                    <label for='delete_mark'>на удаление</label>
+                                    <input type='checkbox' id='delete_mark' tabindex="14">
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+
+                    <div class="col2">
+                        <section class='col2_top'>
+                            <button id="btn_add" data-tooltip="Перейти к созданию записи [shift + T]" formaction="/handbooks/handbook_list.html" value="Список ..."><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            <button id="btn_update" data-tooltip="Перейти к редактированию записи [shift + E]" formaction="/handbooks/handbook_list.html" value="Список ..."><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                            <button id="btn_delete" data-tooltip="Пометить запись на удаление [shift + D]" formaction="/handbooks/handbook_list.html" value="Список ..."><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                            <button id="btn_data_list" data-tooltip='Сформировать лист "Данные"' formaction="/handbooks/handbook_list.html" value="Список ..."><i class="fa fa-file-text-o" aria-hidden="true"></i></button>
+                            <button id="btn_letter" data-tooltip="Написать письмо или отправить отчет заказчику [shift + G]" formaction="" value=""><i class="fa fa-envelope-open-o" aria-hidden="true"></i></button>
+                        </section>
+
+                        <section class='col2_bottom'>
+                            <div class="central_table">
+                                {{>hb_contracts/central_table}}
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="col3">
+                        <section class='col3_bottom'>
+                            <div class='Details_table tabs'>
+                                <div class='Details_table_head container'>
+                                    <div class="row">
+                                        <div class="col-24 order-3">
+                                            <div class="row">
+                                                <a class="tabs_link tabs_link_active" href='#tab_main'>Основное</a>
+                                                <a class="tabs_link" href='#tab_contacts'>Контакты</a>
+                                                <a class="tabs_link" href='#tab_requisites'>Реквизиты</a>
+                                                <a class="tabs_link" href='#tab_attachments'>Приложения</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-24">
+                                            <div class="row">
+                                                <a class="tabs_link" href='#tab_conditions'>Условия</a>
+                                                <a class="tabs_link" href='#tab_cost' repair_work>Стоимость</a>
+                                                <a class="tabs_link" href='#tab_period' repair_work>Сроки</a>
+                                                <a class="tabs_link" href='#tab_history' repair_work>История</a>
+                                                <a class="tabs_link" href='#tab_project_team' repair_work>Команда</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='Details_table_body'>
+                                    <form class="tabs_pane tabs_pane_show" id="tab_main">
+                                        {{>hb_contracts/tab_main}}
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_contacts">
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_requisites">
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_attachments">
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_conditions">
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_cost">
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_period">
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_history">
+                                    </form>
+
+                                    <form class="tabs_pane" id="tab_project_team">
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>

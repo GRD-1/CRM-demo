@@ -1,0 +1,39 @@
+<section style="display: none" record_id = {{record_id}}></section>
+<section class="tab_data">
+    <div title="block_employee_identity">
+        {{#each identity_docs}}
+            {{this.caption}}
+            {{#each this.documents}}
+                <details {{this.attributes}} title='block_one_document' data-nesting="2">
+                    <summary>
+                        {{this.content}}
+                    </summary>
+                    <table class="tab_table">
+                        {{#ifCond this.type 'паспорт'}}
+                            {{> blocks/identities/block_identity_passport}}
+                        {{else ifCond this.type 'снилс'}}
+                            {{> blocks/identities/block_identity_snils}}
+                        {{else ifCond this.type 'инн'}}
+                            {{> blocks/identities/block_identity_TIN}}
+                        {{/ifCond}}
+                    </table>
+                </details>
+            {{/each}}
+        {{/each}}
+    </div>
+    <div title="block_employee_accounts">
+        {{#each this.accounts}}
+            {{this.caption}}
+            {{#each this.accounts}}
+                <details {{this.attributes}} title='block_one_account' data-nesting="2">
+                    <summary>
+                        {{this.content}}
+                    </summary>
+                    <table class="tab_table">
+                        {{> blocks/block_account}}
+                    </table>
+                </details>
+            {{/each}}
+        {{/each}}
+    </div>
+</section>

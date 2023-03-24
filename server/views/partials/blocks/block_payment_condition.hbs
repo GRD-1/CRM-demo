@@ -1,0 +1,39 @@
+<tbody>
+    <tr style="display: none" forbidden>
+        <td>ID:</td>
+        <td><input name="id" type="text" value="{{#if payment_conditions}}{{payment_conditions}}{{else}}new_record{{/if}}" readonly tab_form_field></td>
+    </tr>
+    <tr style="display: none" forbidden>
+        <td>ID родительской записи:</td>
+        <td>
+            <input name="customer" type="text" value="{{customer}}" data-parent_record readonly tab_form_field>
+        </td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Наименование:</td>
+        <td><input name="paycond_title" class="" type="text" value="{{paycond_title}}" readonly tab_form_field></td>
+    </tr>
+    <tr data-obligatory_field>
+        <td>Схема "по умолчанию":</td>
+        <td>
+            <input name="paycond_default" class="paired_field active_field" type="text" record_id="{{paycond_default}}" value="{{paycond_default_title}}" readonly tab_form_field>
+            <div class="paired_field">
+                {{list__true_false}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Только по предоплате:</td>
+        <td>
+            <input name="paycond_prepayment" class="paired_field active_field" type="text" record_id="{{paycond_prepayment}}" value="{{paycond_prepayment_title}}"
+                   readonly tab_form_field>
+            <div class="paired_field">
+                {{list__true_false}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Допустимый долг:</td>
+        <td><input name="paycond_possible_debt" class="" type="number" value="{{paycond_possible_debt}}" readonly tab_form_field></td>
+    </tr>
+</tbody>

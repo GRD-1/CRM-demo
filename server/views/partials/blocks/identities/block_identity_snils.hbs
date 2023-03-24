@@ -1,0 +1,20 @@
+<tr style="display: none" forbidden="">
+    <td>ID:</td>
+    <td><input name="id" type="text" value="{{this.data.id}}" readonly="" tab_form_field=""></td>
+</tr>
+<tr style="display: none" forbidden="">
+    <td>ID родительской записи:</td>
+    <td>
+        <input name="{{this.data.parent_record}}" type="text" value="" data-parent_record="" readonly="" tab_form_field="">
+    </td>
+</tr>
+<tr multiple forbidden>
+    <td>Тип документа:</td>
+    <td>
+        <input name="type" type="text" record_id="" value="{{this.data.type_title}}" readonly tab_form_field placeholder="Тип документа">
+    </td>
+</tr>
+<tr data-obligatory_field multiple>
+    <td>Номер:</td>
+    <td><input name="field_1" type="text" value="{{this.data.field_1}}" readonly="" tab_form_field=""></td>
+</tr>

@@ -1,0 +1,25 @@
+<td {{attributes}} title='block_one_contact_person_contact' nesting="3">
+    <table>
+        <tr style="display: none" forbidden>
+            <td>ID:</td>
+            <td><input name="id" type="text" value="{{id}}" readonly tab_form_field></td>
+        </tr>
+        <tr style="display: none" forbidden>
+            <td>ID родительской записи:</td>
+            <td>
+                <input name="contact_person" type="text" value="{{contact_person}}" data-parent_record readonly tab_form_field>
+            </td>
+        </tr>
+        <tr multiple>
+            <td class="contact_type_container">
+                <input name="type" class="left_column paired_field active_field" type="text" record_id="" value="" readonly tab_form_field>
+                <div class="paired_field">
+                    {{list__contact_type}}
+                </div>
+            </td>
+            <td class="contact_value_container">
+                <input name="value" class="" type="text" record_id="" value="" readonly tab_form_field>
+            </td>
+        </tr>
+    </table>
+</td>

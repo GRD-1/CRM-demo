@@ -1,0 +1,44 @@
+<main id="about_program" class="two_column_page">
+    <aside class="sidebar">
+        <div class="about_program_nav_header">
+            <button id="document_edit" data-tooltip="Редактировать выбранную запись"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            <button id="document_remove" data-tooltip="Удалить выбранную запись"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+            <button id="create_document" data-tooltip="Создать новую страницу документации">Новый документ</button>
+        </div>
+        <div>
+            {{about_menu}}
+        </div>
+    </aside>
+
+    <article class="main_window">
+        <div class="main_window_container page_about_program">
+            <div>{{about_content}}</div>
+        </div>
+    </article>
+    <div id="dialog_box">
+        <div id="create_document_container">
+            <div id="create_document_wrapper">
+                <div>
+                    <div id="document_header">
+                        <div id="document_title">
+                            <input id="document_title_input" type="text" placeholder="Заголовок">
+                        </div>
+                        <div id="document_parent">
+                            {{about_select}}
+                        </div>
+                    </div>
+
+                    <div id="editor">
+
+                    </div>
+                    <div class="buttons">
+                        <div class="btn_wrapper">
+                            <button class="btn" id="publish_document">Опубликовать</button>
+                            <button class="btn" id="btn_cancel">Выход</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

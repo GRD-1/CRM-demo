@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link type="image/svg+xml" sizes="16x16" rel="icon" href="./images/favicon-16x16.png?v=1.16">
+        <link type="image/svg+xml" sizes="32x32" rel="icon" href="./images/favicon-32x32.png?v=1.16">
+
+        {{#each style_stack}}
+            <link rel="stylesheet" href="{{this}}">
+        {{/each}}
+
+        {{#each head_script_stack}}
+            <script type="text/javascript" src="{{this}}"></script>
+        {{/each}}
+
+        <title>{{alias}} | CRM DEMO</title>
+    </head>
+
+    <body>
+        {{> preloader}}
+        {{> header}}
+        <main class="page_maintenance">
+            <div>
+                <h1>Ведутся технические работы. {{maintenance_message}}</h1>
+                <br>
+                <div>
+                    <h2>Отключены разделы: </h2> {{maintenance_list}}
+                </div>
+            </div>
+        </main>
+        {{> footer}}
+        <div style='display: none'>
+            {{#each script_stack}}
+                <script type="text/javascript" src="{{this}}"></script>
+            {{/each}}
+        </div>
+    </body>
+</html>

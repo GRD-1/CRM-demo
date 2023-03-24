@@ -1,0 +1,41 @@
+<tr style="display: none" forbidden="">
+    <td>ID:</td>
+    <td><input name="id" type="text" value="{{this.data.id}}" readonly="" tab_form_field=""></td>
+</tr>
+<tr style="display: none" forbidden="">
+    <td>ID родительской записи:</td>
+    <td>
+        <input name="{{this.data.parent_record}}" type="text" value="" data-parent_record="" readonly="" tab_form_field="">
+    </td>
+</tr>
+<tr multiple forbidden>
+    <td>Тип документа:</td>
+    <td>
+        <input name="type" type="text" record_id="" value="{{this.data.type_title}}" readonly tab_form_field placeholder="Тип документа">
+    </td>
+</tr>
+<tr data-obligatory_field multiple>
+    <td>Серия:</td>
+    <td><input name="field_1" type="text" value="{{this.data.field_1}}" readonly="" tab_form_field=""></td>
+</tr>
+<tr data-obligatory_field multiple>
+    <td>Номер:</td>
+    <td><input name="field_2" type="text" value="{{this.data.field_2}}" readonly="" tab_form_field=""></td>
+</tr>
+<tr data-obligatory_field multiple>
+    <td>Кем выдан:</td>
+    <td><input name="field_3" type="text" value="{{this.data.field_3}}" readonly="" tab_form_field=""></td>
+</tr>
+<tr data-obligatory_field multiple>
+    <td>Дата выдачи:</td>
+    <td>
+        <input name="field_4" class="paired_field active_field" type="text" value="{{this.data.field_4}}" tabindex="" readonly="" tab_form_field="">
+        <div class="paired_field">
+            <input class="" type="date" value="{{this.data.field_4}}" tabindex="">
+        </div>
+    </td>
+</tr>
+<tr data-obligatory_field multiple>
+    <td>Регистрация:</td>
+    <td><input name="field_5" type="text" value="{{this.data.field_5}}" readonly="" tab_form_field=""></td>
+</tr>

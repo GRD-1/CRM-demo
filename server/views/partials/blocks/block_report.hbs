@@ -1,0 +1,50 @@
+        <tr style="display: none" forbidden>
+            <td>ID:</td>
+            <td><input name="id" type="text" value="{{#if report}}{{report}}{{else}}new_record{{/if}}" readonly tab_form_field></td>
+        </tr>
+        <tr style="display: none" forbidden>
+            <td>ID родительской записи:</td>
+            <td>
+                <input name="measurement" type="text" value="{{measurement}}" data-parent_record readonly tab_form_field>
+            </td>
+        </tr>
+        <tr>
+            <td>Наименование:</td>
+            <td><input name="report_title" class="" type="text" value="{{report_title}}" readonly tab_form_field></td>
+        </tr>
+        <tr data-obligatory_field>
+            <td>Тип:</td>
+            <td>
+                <input name="report_type" class="paired_field active_field" type="text" record_id="{{report_type}}" value="{{report_type_title}}" readonly tab_form_field>
+                <div class="paired_field">
+                    {{list__report_type}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Статус:</td>
+            <td>
+                <input name="report_status" class="paired_field active_field" type="text" record_id="{{report_status}}" value="{{report_status_title}}" readonly tab_form_field>
+                <div class="paired_field">
+                    {{list__report_status}}
+                </div>
+            </td>
+        </tr>
+        <tr data-obligatory_field>
+            <td>Составитель:</td>
+            <td>
+                <input name="report_maker" class="paired_field active_field" type="text" record_id="{{report_maker}}" value="{{report_maker_title}}" readonly tab_form_field>
+                <div class="paired_field">
+                    {{list__manager}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Дата создания:</td>
+            <td>
+                <input name="rep_date_of_entry" class="paired_field active_field" type="text" value="{{rep_date_of_entry}}" readonly tab_form_field>
+                <div class="paired_field">
+                    <input class="" type="date">
+                </div>
+            </td>
+        </tr>

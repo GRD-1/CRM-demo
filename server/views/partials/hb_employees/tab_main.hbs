@@ -1,0 +1,20 @@
+<section style="display: none" record_id = "{{#if record_id}}{{record_id}}{{else}}new_record{{/if}}"></section>
+<section class="tab_data">
+    <details {{#each employee_block_attributes}}{{@key}}={{this}} {{/each}} title="block_employee" data-nesting="1">
+        <summary id="tab_employee">
+            <span>Сотрудник</span>
+            <span>
+                <input name="employee" class="paired_field active_field" type="text" record_id="{{employee_id}}" value="{{employee_full_name}}" placeholder="новая запись" readonly tab_form_field>
+                <div class="paired_field">
+                    {{list__employee}}
+                </div>
+            </span>
+            <span class="tab_form_btn_plug"></span>
+        </summary>
+        <table class="tab_table">
+            {{> blocks/block_employee}}
+        </table>
+    </details>
+</section>
+<br>
+{{> comment}}

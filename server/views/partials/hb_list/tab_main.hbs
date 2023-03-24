@@ -1,0 +1,11 @@
+<section style="display: none" record_id = "{{#if record_id}}{{record_id}}{{else}}new_record{{/if}}"></section>
+<section class="tab_data">
+    <table class='tab_table'>
+        <tr data-obligatory_field>
+            <td>Наименование:</td>
+            <td><input name="title" class="" type="text" value="{{title}}" readonly tab_form_field></td>
+        </tr>
+    </table>
+</section>
+<br>
+{{> comment}}

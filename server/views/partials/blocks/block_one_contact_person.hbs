@@ -1,0 +1,27 @@
+<details open='open' title='block_one_contact_person' nesting="2">
+    <summary>
+        <span>ФИО</span>
+        <span></span>
+        <span class="tab_form_buttons"><div class="tab_btn_new"><div></div></div></span>
+        <span class="tab_form_buttons"><div class="tab_btn_del"><div></div></div></span>
+    </summary>
+    <table class="tab_table">
+        <tr style="display: none" forbidden>
+            <td>ID:</td>
+            <td><input name="id" type="text" value="{{id}}" readonly tab_form_field></td>
+        </tr>
+        <tr style="display: none" forbidden>
+            <td>ID родительской записи:</td>
+            <td>
+                <input name="customer" type="text" value="{{customer}}" data-parent_record readonly tab_form_field>
+            </td>
+        </tr>
+        <tr multiple>
+            <td>ФИО конт лица:</td>
+            <td>
+                <input name="full_name" class="active_field" type="text" value="" readonly tab_form_field>
+            </td>
+            <td class="tab_form_btn_plug"></td>
+        </tr>
+    </table>
+</details>
